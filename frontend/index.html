@@ -16,6 +16,29 @@
         .font-chandler {
             font-family: 'Chandler Pro', serif;
         }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll Animation */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger Animation */
+        .scroll-animate:nth-child(1) { transition-delay: 0.1s; }
+        .scroll-animate:nth-child(2) { transition-delay: 0.2s; }
+        .scroll-animate:nth-child(3) { transition-delay: 0.3s; }
+        .scroll-animate:nth-child(4) { transition-delay: 0.4s; }
     </style>
 </head>
 <body class="bg-white">
@@ -82,7 +105,7 @@
             </div>
 
             <div class="grid md:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition scroll-animate">
                     <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -92,7 +115,7 @@
                     <p class="text-gray-600">Equipe de psicólogas com expertise em saúde corporativa</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition scroll-animate">
                     <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -102,7 +125,7 @@
                     <p class="text-gray-600">Atendemos integralmente à NR-01 e exigências legais</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition scroll-animate">
                     <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -112,7 +135,7 @@
                     <p class="text-gray-600">Soluções personalizadas baseadas em evidências</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition scroll-animate">
                     <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                         <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
@@ -188,7 +211,7 @@
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl p-12 flex flex-col justify-center">
+                <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl p-12 flex flex-col justify-center scroll-animate">
                     <div class="space-y-6">
                         <div class="text-center">
                             <p class="text-5xl font-bold text-indigo-600 mb-2">75%</p>
@@ -303,7 +326,7 @@
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Essential Package -->
-                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-indigo-600 hover:shadow-lg transition">
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-indigo-600 hover:shadow-lg transition scroll-animate">
                     <h3 class="text-2xl font-bold text-gray-900 mb-2">Pacote Essencial</h3>
                     <p class="text-gray-600 mb-6">Diagnóstico completo</p>
                     <div class="mb-6">
@@ -334,32 +357,32 @@
                 </div>
 
                 <!-- Intermediate Package -->
-                <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-gray-900 rounded-2xl p-8 shadow-lg relative">
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-purple-600 hover:shadow-lg transition scroll-animate relative">
                     <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold">
                         Mais Popular
                     </div>
-                    <h3 class="text-2xl font-bold mb-2">Pacote Intermediário</h3>
-                    <p class="text-indigo-100 mb-6">Diagnóstico + treinamentos</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Pacote Intermediário</h3>
+                    <p class="text-gray-600 mb-6">Diagnóstico + treinamentos</p>
                     <div class="mb-6">
-                        <span class="text-2xl md:text-3xl lg:text-4xl font-bold">R$ 6.000</span>
-                        <span class="text-indigo-200 ml-2">a R$ 9.000</span>
+                        <span class="text-2xl md:text-3xl lg:text-4xl font-bold text-purple-600">R$ 6.000</span>
+                        <span class="text-gray-600 ml-2">a R$ 9.000</span>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex gap-3">
-                            <span class="text-yellow-300">✓</span>
-                            <span class="text-indigo-100">Tudo do Essencial</span>
+                            <span class="text-purple-600">✓</span>
+                            <span class="text-gray-700">Tudo do Essencial</span>
                         </li>
                         <li class="flex gap-3">
-                            <span class="text-yellow-300">✓</span>
-                            <span class="text-indigo-100">Palestras e workshops</span>
+                            <span class="text-purple-600">✓</span>
+                            <span class="text-gray-700">Palestras e workshops</span>
                         </li>
                         <li class="flex gap-3">
-                            <span class="text-yellow-300">✓</span>
-                            <span class="text-indigo-100">Treinamento de lideranças</span>
+                            <span class="text-purple-600">✓</span>
+                            <span class="text-gray-700">Treinamento de lideranças</span>
                         </li>
                         <li class="flex gap-3">
-                            <span class="text-yellow-300">✓</span>
-                            <span class="text-indigo-100">Suporte inicial</span>
+                            <span class="text-purple-600">✓</span>
+                            <span class="text-gray-700">Suporte inicial</span>
                         </li>
                     </ul>
                     <button class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-orange-500 transition">
@@ -399,7 +422,7 @@
                 </div>
 
                 <!-- Events Package -->
-                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-indigo-600 hover:shadow-lg transition">
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-indigo-600 hover:shadow-lg transition scroll-animate">
                     <h3 class="text-2xl font-bold text-gray-900 mb-2">Palestras/Treinamentos</h3>
                     <p class="text-gray-600 mb-6">Por evento</p>
                     <div class="mb-6">
@@ -437,7 +460,7 @@
         <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
             <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 text-center">O Que Nos Diferencia</h2>
             <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
+                <div class="text-center scroll-animate">
                     <div class="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
@@ -447,7 +470,7 @@
                     <p class="text-gray-700">Psicóloga com expertise em saúde corporativa</p>
                 </div>
 
-                <div class="text-center">
+                <div class="text-center scroll-animate">
                     <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
@@ -467,7 +490,7 @@
                     <p class="text-gray-700">Padrões éticos e sigilo profissional</p>
                 </div>
 
-                <div class="text-center">
+                <div class="text-center scroll-animate">
                     <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
@@ -483,7 +506,7 @@
     <!-- Contact Section -->
     <section id="contato" class="py-32 bg-gradient-to-b from-white to-gray-50">
         <div class="max-w-6xl mx-auto px-3 sm:px-4 lg:px-6">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16">s
                 
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Entre em Contato</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -493,7 +516,7 @@
 
             <div class="grid md:grid-cols-3 gap-8 mb-12">
                 <!-- Info Card 1 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition">
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition scroll-animate">
                     <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                         <span class="text-2xl">👩‍⚕️</span>
                     </div>
@@ -503,7 +526,7 @@
                 </div>
 
                 <!-- Info Card 2 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition">
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition scroll-animate">
                     <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                         <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
@@ -515,7 +538,7 @@
                 </div>
 
                 <!-- Info Card 3 -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition">
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition scroll-animate">
                     <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                         <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -528,7 +551,7 @@
             </div>
 
             <!-- CTA Section -->
-            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 text-center text-white">
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 text-center text-white scroll-animate">
                 <h3 class="text-3xl font-bold mb-4">Comece Sua Transformação Hoje</h3>
                 <p class="text-indigo-100 mb-8 max-w-2xl mx-auto">
                     Consulta inicial gratuita para empresas interessadas em implementar um programa de saúde mental corporativa.
@@ -547,5 +570,39 @@
             <p class="mt-2 text-sm">Saúde Mental Corporativa | NR-01 | Gerenciamento de Riscos Psicossociais</p>
         </div>
     </footer>
+
+    <script>
+        // Scroll Animation usando Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Descomenta a linha abaixo se quiser animar apenas uma vez
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Aplica animação aos elementos com classe scroll-animate
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Suaviza scroll dos links de âncora
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
