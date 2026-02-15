@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "173326999048",
+    "project_id": "clareza-f8d97",
+    "storage_bucket": "clareza-f8d97.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173326999048:android:c0f0500ebf574fd7a5bbbd",
+        "android_client_info": {
+          "package_name": "com.luisjunqueira.clareza"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpKX1EZA-Vnos-xo4Z-M3fGcibmgOYfx4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

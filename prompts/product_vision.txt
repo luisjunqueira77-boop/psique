@@ -1,0 +1,71 @@
+import 'package:firebase_core/firebase_core.dart'; de sistemas e especialista em Flutter + Firebase.
+import 'package:flutter/material.dart';
+Estamos desenvolvendo um aplicativo Android chamado provisoriamente "Diário Emocional Guiado".
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();baseado em princípios da Terapia Cognitivo-Comportamental (TCC), que permita ao usuário registrar emoções, refletir sobre pensamentos automáticos e acompanhar sua evolução emocional ao longo do tempo.
+  runApp(const MyApp());
+} app NÃO substitui terapia profissional. Ele é uma ferramenta de apoio ao autoconhecimento.
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+Funcionalidades obrigatórias:
+  @override diário de humor:
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(ara descrever situação
+        body: Center(
+          child: Text('Hello World!'),a em TCC:
+        ), aconteceu?
+      ), pensamento passou pela sua cabeça?
+    );ue evidências sustentam esse pensamento?
+  }- Existe uma interpretação alternativa?
+}
+3. Integração com API de IA:
+   - Resumir o texto do usuário
+   - Gerar 1 pergunta de aprofundamento
+   - Linguagem empática e profissional
+   - Nunca fornecer diagnóstico
+
+4. Histórico de registros
+
+5. Dashboard simples com gráfico semanal de humor
+
+STACK DEFINIDA:
+- Frontend: Flutter
+- Backend: Firebase (Authentication + Firestore)
+- Arquitetura: Clean Architecture simplificada
+- Gerenciamento de estado: Riverpod
+- Estrutura modular por features
+
+DIRETRIZES IMPORTANTES:
+
+1. Código limpo e organizado.
+2. Separar claramente:
+   - UI
+   - Lógica de negócio
+   - Serviços (Firebase, IA)
+3. Nunca misturar lógica dentro da UI.
+4. Sempre sugerir melhorias estruturais.
+5. Priorizar escalabilidade futura.
+6. Evitar dependências desnecessárias.
+7. Manter o MVP enxuto (não adicionar features fora do escopo).
+
+REGRAS DE IA:
+
+A IA deve:
+- Ser empática
+- Nunca dar diagnóstico clínico
+- Nunca substituir terapia
+- Nunca responder a crises graves (apenas orientar buscar ajuda profissional)
+
+FOCO ATUAL:
+Criar a estrutura inicial do projeto Flutter com:
+- Organização de pastas
+- Setup do Firebase
+- Modelos de dados
+- Primeira tela de registro de humor
+
+Antes de gerar código, sempre explique a arquitetura que será criada.
+
+Se algo estiver fora do escopo, questione antes de implementar.
